@@ -10,17 +10,21 @@
 <body>
     <div id="app">
         <p>{{message}}</p> <!-- View -->
+        <input type="text" v-model="inputValue" /> <br />
+        input value:{{inputValue}}
     </div>
     <script src="vue.js"></script>
     <script>
         const app = Vue.createApp({
             data() {
                 return {
-                    message: 'hello, vue' // ModelData
+                    message: 'hello, vue', // ModelData, 'message' is model variable
+                    inputValue: ''
                 }
             }
         });
-        console.log('app:', app);
+        // change or access model variable by vm.VariableName in browser console
+        // vm.inputValue
         // ViewModel
         const vm = app.mount('#app');  
     </script>
